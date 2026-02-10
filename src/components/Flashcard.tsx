@@ -37,11 +37,11 @@ export default function Flashcard({
         aria-label={!isRevealed ? 'Reveal answer' : undefined}
       >
         <div
-          className={`relative w-full min-h-[280px] sm:min-h-[320px] rounded-2xl shadow-xl transition-all duration-500
+          className={`w-full rounded-2xl shadow-xl transition-all duration-500
             ${isRevealed ? 'bg-white ring-2 ring-amber-300' : 'bg-white hover:shadow-2xl hover:-translate-y-1'}`}
         >
           {/* Front - always visible */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
+          <div className="flex flex-col items-center justify-center p-6 min-h-[280px] sm:min-h-[320px]">
             <span className="text-sm text-gray-400 mb-2 uppercase tracking-wide">
               English
             </span>

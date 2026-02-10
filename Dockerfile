@@ -14,6 +14,9 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+# Ensure public dir exists (may be empty)
+RUN mkdir -p public
+
 RUN npm run build
 
 # Production image, copy all the files and run next

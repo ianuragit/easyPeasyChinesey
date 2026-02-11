@@ -11,6 +11,7 @@ export default function Landing({ onStart }: LandingProps) {
   const [userName, setUserName] = useState('');
   const [showPinyin, setShowPinyin] = useState(true);
   const [showHanzi, setShowHanzi] = useState(true);
+  const [showSpanish, setShowSpanish] = useState(false);
   const [includeMeasureWords] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -21,6 +22,7 @@ export default function Landing({ onStart }: LandingProps) {
       showPinyin,
       showHanzi,
       includeMeasureWords,
+      showSpanish,
     });
   };
 
@@ -73,6 +75,12 @@ export default function Landing({ onStart }: LandingProps) {
               checked={showPinyin}
               onChange={setShowPinyin}
               description="Display romanized pronunciation"
+            />
+            <Toggle
+              label="Show Spanish"
+              checked={showSpanish}
+              onChange={setShowSpanish}
+              description="Show Spanish alongside English"
             />
             <Toggle
               label="Show Chinese Characters"

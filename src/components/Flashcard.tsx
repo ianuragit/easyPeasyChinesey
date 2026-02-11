@@ -7,6 +7,7 @@ interface FlashcardProps {
   isRevealed: boolean;
   showPinyin: boolean;
   showHanzi: boolean;
+  showSpanish: boolean;
   onReveal: () => void;
   onCorrect: () => void;
   onWrong: () => void;
@@ -17,6 +18,7 @@ export default function Flashcard({
   isRevealed,
   showPinyin,
   showHanzi,
+  showSpanish,
   onReveal,
   onCorrect,
   onWrong,
@@ -45,9 +47,14 @@ export default function Flashcard({
             <span className="text-sm text-gray-400 mb-2 uppercase tracking-wide">
               English
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 text-center mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 text-center mb-2">
               {word.english}
             </h2>
+            {showSpanish && word.spanish && (
+              <p className="text-lg text-blue-600 font-medium mb-2">
+                {word.spanish}
+              </p>
+            )}
             {word.pos && (
               <span className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full mb-4">
                 {word.pos}
@@ -73,6 +80,12 @@ export default function Flashcard({
                 {showPinyin && (
                   <p className="text-xl text-amber-700 font-medium">
                     {word.pinyin}
+                  </p>
+                )}
+
+                {showSpanish && word.spanish && (
+                  <p className="text-base text-blue-500 mt-1">
+                    {word.spanish}
                   </p>
                 )}
 

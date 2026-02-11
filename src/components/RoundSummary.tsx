@@ -83,7 +83,14 @@ export default function RoundSummary({
                   key={r.word.id}
                   className="flex items-center justify-between py-2 px-3 bg-rose-50 rounded-lg"
                 >
-                  <span className="text-gray-700">{r.word.english}</span>
+                  <span className="text-gray-700">
+                    {r.word.english}
+                    {r.word.spanish && (
+                      <span className="text-blue-500 text-sm ml-1">
+                        ({r.word.spanish})
+                      </span>
+                    )}
+                  </span>
                   <span className="text-right">
                     <span className="font-chinese text-red-700 font-medium">
                       {r.word.hanzi}

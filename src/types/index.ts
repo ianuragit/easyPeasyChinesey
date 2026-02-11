@@ -2,6 +2,7 @@ export interface VocabWord {
   id: string;
   rank: number;
   english: string;
+  spanish?: string;
   hanzi: string;
   pinyin: string;
   pos?: string;
@@ -18,6 +19,7 @@ export interface GameSettings {
   showPinyin: boolean;
   showHanzi: boolean;
   includeMeasureWords: boolean;
+  showSpanish: boolean;
 }
 
 export interface WordResult {

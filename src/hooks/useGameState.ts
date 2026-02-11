@@ -14,6 +14,7 @@ export function useGameState() {
     showPinyin: true,
     showHanzi: true,
     includeMeasureWords: false,
+    showSpanish: false,
   });
   const [currentRound, setCurrentRound] = useState<RoundData | null>(null);
   const [roundHistory, setRoundHistory] = useState<RoundData[]>([]);

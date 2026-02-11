@@ -100,6 +100,7 @@ export default function GameRound({
           isRevealed={isRevealed}
           showPinyin={settings.showPinyin}
           showHanzi={settings.showHanzi}
+          showSpanish={settings.showSpanish}
           onReveal={onReveal}
           onCorrect={() => onAnswer(true)}
           onWrong={() => onAnswer(false)}
